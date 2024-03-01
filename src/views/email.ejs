@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Thank You for Admission - HubIT</title>
+  <style>body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+.email-container {
+  max-width: 600px;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.email-header {
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.email-header h1 {
+  margin: 0;
+}
+
+.email-body {
+  padding: 20px;
+  color: #333;
+  background-size:cover;
+  background-position:center;
+}
+
+.email-footer {
+  padding: 10px;
+  color: #fff;
+  text-align: center;
+}
+
+.email-footer a {
+  color: #fff;
+  text-decoration: none;
+}
+.image{
+  display:flex;
+  justify-content: center;
+
+}
+</style>
+</head>
+
+<body >
+  <div class="email-container">
+    <div class="email-body" style="background-color: #f8f8f8;">
+    <div class="image">
+    <img src="../public/hubitlogo.png" alt="hubit logo"/>
+    </div>
+      <h2>Thank You <%= info.name %> for Taking Admission!</h2>
+      <p>We are thrilled to welcome you to HubIT Institution. Your admission has been successfully processed.</p>
+     
+      <p>If you have any further questions or need assistance, feel free to contact our admissions office.</p>
+      <p>Looking forward to an exciting academic journey together!</p>
+    </div>
+
+    <div class="email-footer" style="background-color: #a0047d;">
+      <p>&copy; 2024 HubIT Institution. All rights reserved.</p>
+    </div>
+  </div>
+</body>
+
+</html>
