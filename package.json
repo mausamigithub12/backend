@@ -44,7 +44,7 @@
       "swagger-autogen": "^2.23.7",
       "swagger-jsdoc": "^6.2.8",
       "swagger-ui-express": "^5.0.0",
-      "typeorm": "0.3.17"
+      "typeorm": "^0.3.17"
    },
    "scripts": {
       "start": "ts-node src/index.ts",

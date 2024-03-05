@@ -298,8 +298,8 @@ export const delPer = async (req: Request, res: Response, next: NextFunction) =>
     /* 	#swagger.tags = ['Courses'] */
 
     try {
-        const result = await Course.find({where:{id:In([...JSON.parse(req.body.ids)])}});
-        if (!result ||result.length == 0) {
+        const result = await Course.find({where:{id:req.params.id}});
+        if (!result ) {
             return res.status(404).json({ status: 404, message: "no data found" })
         }
         result.map(async data => await Course.remove(data));

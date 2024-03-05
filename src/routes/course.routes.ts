@@ -7,16 +7,16 @@ import { isAdminLogin } from '../middleware';
 const router = Router();
 
 //course
-router.route("/").get(getCourses).post(isAdminLogin, upload.single("image"), addnewcourse);
+router.route("/").get(getCourses).post(upload.single("image"), addnewcourse);
 router.route("/deleteMany").post(isAdminLogin, deleteCourse).patch(isAdminLogin, restoreData).get(isAdminLogin, deletedData)
 router.route("/getinstructor/:id").get(isAdminLogin, getcourseinstructor);
-router.route("/delPermanent").delete(isAdminLogin, delPer);
+router.route("/delPermanent/:id").delete(delPer);
 router.route("/coursereview/:id").get(isAdminLogin, getRevOfCourse);
 router.route("/relatedcourse/:id").get(isAdminLogin, getrealtedcourse);
 router.route("/getcurstu/:id").get(isAdminLogin, courseStudent);
 
 router.route("/:id/syllabus").get(getsyllabus);
-router.route("/:id").get(getcoursedetails).patch(isAdminLogin, upload.single("image"),courseValidation, updateCourse);
+router.route("/:id").get(getcoursedetails).patch(isAdminLogin, upload.single("image"),courseValidation, updateCourse).delete(delPer);;
 
 
 export default router;
