@@ -16,7 +16,7 @@ router.route("/relatedcourse/:id").get(isAdminLogin, getrealtedcourse);
 router.route("/getcurstu/:id").get(isAdminLogin, courseStudent);
 
 router.route("/:id/syllabus").get(getsyllabus);
-router.route("/:id").get(getcoursedetails).patch(isAdminLogin, upload.single("image"),courseValidation, updateCourse).delete(delPer);;
+router.route("/:id").get(getcoursedetails).patch(upload.single("image"), updateCourse).delete(delPer);
 
 
 export default router;
