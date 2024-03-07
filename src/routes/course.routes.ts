@@ -21,3 +21,4 @@ router.route("/:id").get(getcoursedetails).patch(upload.single("image"), updateC
 
 export default router;
 
+
